@@ -6,4 +6,7 @@ The login screen enables users to enter their username and password to log in, u
 <br><br>
 Demonstration:
 <br><br>
-https://github.com/Swapnil-J-Patil/E-Learning-App-With-AR-Feature/assets/129786110/e6d873b2-4ccd-4590-b072-a5b73edbcaf5
+
+https://github.com/Swapnil-J-Patil/E-Learning-App-With-AR-Feature/assets/129786110/5f6a909d-ceb7-45c0-99d2-5fe766e51d19
+
+
