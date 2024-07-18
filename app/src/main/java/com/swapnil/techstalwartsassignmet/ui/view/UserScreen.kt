@@ -118,7 +118,8 @@ fun UserScreen(
                     fontWeight = FontWeight.Bold,
                     modifier = Modifier.clickable {
                         loginViewModel.logout()
-                        navController.navigate("login_screen")
+                       // navController.navigate("login_screen")
+                        navController.popBackStack()
                     },
                     color = Color.Black,
                 )

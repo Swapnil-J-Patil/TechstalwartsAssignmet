@@ -1,5 +1,7 @@
 package com.swapnil.techstalwartsassignmet.model.data
 
+import androidx.annotation.Keep
+
 data class User(
     val id: Int,
     val email: String,

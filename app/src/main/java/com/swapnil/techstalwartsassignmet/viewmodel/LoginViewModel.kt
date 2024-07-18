@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import com.swapnil.techstalwartsassignmet.model.data.LoginRequest
-import com.swapnil.techstalwartsassignmet.model.di.LoginModule
+import com.swapnil.techstalwartsassignmet.model.network.NetworkModule
 import kotlinx.coroutines.launch
 import retrofit2.HttpException
 import java.io.IOException
@@ -25,7 +25,7 @@ class LoginViewModel(private val context: Context) : ViewModel() {
     fun login() {
         viewModelScope.launch {
             try {
-                val response = LoginModule.api.login(LoginRequest(email.value, password.value))
+                val response = NetworkModule.loginApi.login(LoginRequest(email.value, password.value))
                 token.value = response.token
                 saveTokenToSharedPreferences(response.token)
                 errorMessage.value = ""

@@ -1,15 +1,10 @@
 package com.swapnil.techstalwartsassignmet.viewmodel
 
-import android.location.Location
-import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.toMutableStateList
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.swapnil.techstalwartsassignmet.model.data.User
-import com.swapnil.techstalwartsassignmet.model.di.NetworkModule
+import com.swapnil.techstalwartsassignmet.model.network.NetworkModule
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
@@ -35,7 +30,7 @@ class UserViewModel : ViewModel() {
 
             do {
                 try {
-                    val response = NetworkModule.api.getUsers(page)
+                    val response = NetworkModule.userApi.getUsers(page)
                     totalPages = response.total_pages
                     allUsers.addAll(response.data)
                     page++
